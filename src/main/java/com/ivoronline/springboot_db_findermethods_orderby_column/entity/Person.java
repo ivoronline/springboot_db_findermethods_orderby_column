@@ -1,11 +1,17 @@
-package com.ivoronline.springboot_db_findermethods_orderby_column.entities;
+package com.ivoronline.springboot_db_findermethods_orderby_column.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
   //PROPERTIES
@@ -14,12 +20,5 @@ public class Person {
   public Integer id;
   public String  name;
   public Integer age;
-
-  //CONSTRUCTORS
-  public Person() {}
-  public Person(String name, Integer age) {
-    this.name = name;
-    this.age  = age;
-  }
 
 }
